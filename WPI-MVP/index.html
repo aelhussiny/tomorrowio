@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Wind Power Intelligence Demo | ESRI | Tomorrow.IO</title>
+        <link rel="stylesheet" href="css/main.css" />
+        <link
+            rel="stylesheet"
+            href="https://js.arcgis.com/4.27/esri/themes/light/main.css"
+        />
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="http://code.highcharts.com/themes/dark-unica.js"></script>
+        <script src="https://js.arcgis.com/4.27/"></script>
+    </head>
+    <body>
+        <div id="titleContainer">
+            <h1>ESRI + Tomorrow.IO | Wind Power Intelligence Map</h1>
+        </div>
+        <div id="loading">
+            <img src="img/loading.gif" width="80"/>
+        </div>
+        <div id="container">
+            <div id="viewDiv"></div>
+            <div
+                id="select-by-rectangle"
+                class="esri-widget esri-widget--button esri-widget esri-interactive"
+                title="Select features by rectangle"
+            >
+                <span class="esri-icon-polygon"></span>
+            </div>
+            <div id="chartDiv" class="closed">
+                <div id="chart"></div>
+                <button id="closeChartBtn">
+                    <span class="esri-icon-close"></span>
+                </button>
+            </div>
+        </div>
+        <script>
+            Highcharts.AST.bypassHTMLFiltering = true;
+        </script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
